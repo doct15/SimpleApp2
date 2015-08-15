@@ -17,6 +17,7 @@ bmcgehee/SimpleApp2:
     - echo "PreRelease"
     - touch release_timestamp.file
     - tar -czvf app.tgz *
+    - lsb_release -a
     - echo "ENV $EXAMPLE"
     - echo "ENV2 $EXAMPLE2"
     - echo "APPNAME $DISTELLI_APPNAME"
