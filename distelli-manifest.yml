@@ -30,8 +30,6 @@ bmcgehee/SimpleApp2:
     - echo "RELEASE $DISTELLI_RELEASE"
     - DATE=$(date +"%Y%m%d%H%M%Si%N")
     - touch prerelease.$DATE
-    - echo "Sleeping"
-    - sleep 30
    
   PreInstall:
     - echo "PreInstall"
