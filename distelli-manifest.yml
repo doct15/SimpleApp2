@@ -2,16 +2,20 @@ bmcgehee/SimpleApp2:
 
   Env:
     - EXAMPLE: '"not overridden!!!"'
+    - EXAMPLE2: '"not overridden!!!"'
     
   PkgInclude:
     - application.sh
-  
+    - app.tgz
+    - 'sr/'
+      
   PkgExclude:
-     - '*.yml'
+    - '*.yml'
+    #- 'sr/*.raw/'
      
   CommitData:
-     - RepoType: Git
-     - RepoPath: .
+    - RepoType: Git
+    - RepoPath: .
 
   PreRelease:
     - echo "PreRelease"
@@ -27,8 +31,29 @@ bmcgehee/SimpleApp2:
     - echo "RELBRANCH $DISTELLI_RELBRANCH"
     - echo "RELREPOTYPE $DISTELLI_RELREPOTYPE"
     - echo "RELEASE $DISTELLI_RELEASE"
+    - echo "MANIFEST $DISTELLI_MANIFEST"
+    - echo "BUILDNUM $DISTELLI_BUILDNUM"
+    - echo "BUILD $BUILD_VAR1"
     - DATE=$(date +"%Y%m%d%H%M%Si%N")
     - touch prerelease.$DATE
+
+  ReleaseNotesCmd:
+    - echo "Exec"
+    - echo "ENV $EXAMPLE"
+    - echo "ENV2 $EXAMPLE2"
+    - echo "APPNAME $DISTELLI_APPNAME"
+    - echo "APPHOME $DISTELLI_APPHOME"
+    - echo "INSTALLHOME $DISTELLI_INSTALLHOME"
+    - echo "RELVERSION $DISTELLI_RELVERSION"
+    - echo "RELREVISION $DISTELLI_RELREVISION"
+    - echo "RELBRANCH $DISTELLI_RELBRANCH"
+    - echo "RELREPOTYPE $DISTELLI_RELREPOTYPE"
+    - echo "RELEASE $DISTELLI_RELEASE"
+    - echo "MANIFEST $DISTELLI_MANIFEST"
+    - echo "BUILDNUM $DISTELLI_BUILDNUM"
+    - echo "BUILD $BUILD_VAR1"
+    - DATE=$(date +"%Y%m%d%H%M%S%N")
+    - touch releasenotescmd.$DATE
    
   PreInstall:
     - echo "PreInstall"
@@ -42,6 +67,9 @@ bmcgehee/SimpleApp2:
     - echo "RELBRANCH $DISTELLI_RELBRANCH"
     - echo "RELREPOTYPE $DISTELLI_RELREPOTYPE"
     - echo "RELEASE $DISTELLI_RELEASE"
+    - echo "MANIFEST $DISTELLI_MANIFEST"
+    - echo "BUILDNUM $DISTELLI_BUILDNUM"
+    - echo "BUILD $BUILD_VAR1"
     - DATE=$(date +"%Y%m%d%H%M%Si%N")
     - touch preinstall.$DATE
   #Install:
@@ -60,6 +88,9 @@ bmcgehee/SimpleApp2:
     - echo "RELBRANCH $DISTELLI_RELBRANCH"
     - echo "RELREPOTYPE $DISTELLI_RELREPOTYPE"
     - echo "RELEASE $DISTELLI_RELEASE"
+    - echo "MANIFEST $DISTELLI_MANIFEST"
+    - echo "BUILDNUM $DISTELLI_BUILDNUM"
+    - echo "BUILD $BUILD_VAR1"
     - DATE=$(date +"%Y%m%d%H%M%S%N")
     - touch postinstall.$DATE
     
@@ -75,6 +106,9 @@ bmcgehee/SimpleApp2:
     - echo "RELBRANCH $DISTELLI_RELBRANCH"
     - echo "RELREPOTYPE $DISTELLI_RELREPOTYPE"
     - echo "RELEASE $DISTELLI_RELEASE"
+    - echo "MANIFEST $DISTELLI_MANIFEST"
+    - echo "BUILDNUM $DISTELLI_BUILDNUM"
+    - echo "BUILD $BUILD_VAR1"
     - DATE=$(date +"%Y%m%d%H%M%Si%N")
     - touch prerestart.$DATE
   PostRestart:
@@ -89,6 +123,9 @@ bmcgehee/SimpleApp2:
     - echo "RELBRANCH $DISTELLI_RELBRANCH"
     - echo "RELREPOTYPE $DISTELLI_RELREPOTYPE"
     - echo "RELEASE $DISTELLI_RELEASE"
+    - echo "MANIFEST $DISTELLI_MANIFEST"
+    - echo "BUILDNUM $DISTELLI_BUILDNUM"
+    - echo "BUILD $BUILD_VAR1"
     - DATE=$(date +"%Y%m%d%H%M%S%N")
     - touch postrestart.$DATE
   PreStart:
@@ -103,6 +140,9 @@ bmcgehee/SimpleApp2:
     - echo "RELBRANCH $DISTELLI_RELBRANCH"
     - echo "RELREPOTYPE $DISTELLI_RELREPOTYPE"
     - echo "RELEASE $DISTELLI_RELEASE"
+    - echo "MANIFEST $DISTELLI_MANIFEST"
+    - echo "BUILDNUM $DISTELLI_BUILDNUM"
+    - echo "BUILD $BUILD_VAR1"
     - DATE=$(date +"%Y%m%d%H%M%S%N")
     - touch prestart.$DATE
   #Start:
@@ -117,6 +157,9 @@ bmcgehee/SimpleApp2:
   #  - echo "RELBRANCH $DISTELLI_RELBRANCH"
   #  - echo "RELREPOTYPE $DISTELLI_RELREPOTYPE"
   #  - echo "RELEASE $DISTELLI_RELEASE"
+  #  - echo "MANIFEST $DISTELLI_MANIFEST"
+  #  - echo "BUILDNUM $DISTELLI_BUILDNUM"
+  #  - echo "BUILD $BUILD_VAR1"
   #  - DATE=$(date +"%Y%m%d%H%M%S%N")
   #  - touch start.$DATE
   #  - /home/bmcgehee/application.sh
@@ -132,6 +175,9 @@ bmcgehee/SimpleApp2:
     - echo "RELBRANCH $DISTELLI_RELBRANCH"
     - echo "RELREPOTYPE $DISTELLI_RELREPOTYPE"
     - echo "RELEASE $DISTELLI_RELEASE"
+    - echo "MANIFEST $DISTELLI_MANIFEST"
+    - echo "BUILDNUM $DISTELLI_BUILDNUM"
+    - echo "BUILD $BUILD_VAR1"
     - DATE=$(date +"%Y%m%d%H%M%S%N")
     - touch poststart.$DATE
   #  - /home/bmcgehee/application.sh
@@ -147,6 +193,9 @@ bmcgehee/SimpleApp2:
     - echo "RELBRANCH $DISTELLI_RELBRANCH"
     - echo "RELREPOTYPE $DISTELLI_RELREPOTYPE"
     - echo "RELEASE $DISTELLI_RELEASE"
+    - echo "MANIFEST $DISTELLI_MANIFEST"
+    - echo "BUILDNUM $DISTELLI_BUILDNUM"
+    - echo "BUILD $BUILD_VAR1"
     - DATE=$(date +"%Y%m%d%H%M%S%N")
     - touch prestart.$DATE
   Terminate:
@@ -161,6 +210,9 @@ bmcgehee/SimpleApp2:
     - echo "RELBRANCH $DISTELLI_RELBRANCH"
     - echo "RELREPOTYPE $DISTELLI_RELREPOTYPE"
     - echo "RELEASE $DISTELLI_RELEASE"
+    - echo "MANIFEST $DISTELLI_MANIFEST"
+    - echo "BUILDNUM $DISTELLI_BUILDNUM"
+    - echo "BUILD $BUILD_VAR1"
     - DATE=$(date +"%Y%m%d%H%M%S%N")
     - touch terminate.$DATE
   PostTerminate:
@@ -175,6 +227,9 @@ bmcgehee/SimpleApp2:
     - echo "RELBRANCH $DISTELLI_RELBRANCH"
     - echo "RELREPOTYPE $DISTELLI_RELREPOTYPE"
     - echo "RELEASE $DISTELLI_RELEASE"
+    - echo "MANIFEST $DISTELLI_MANIFEST"
+    - echo "BUILDNUM $DISTELLI_BUILDNUM"
+    - echo "BUILD $BUILD_VAR1"
     - DATE=$(date +"%Y%m%d%H%M%S%N")
     - touch postterminate.$DATE
   Exec:
@@ -189,6 +244,9 @@ bmcgehee/SimpleApp2:
     - echo "RELBRANCH $DISTELLI_RELBRANCH"
     - echo "RELREPOTYPE $DISTELLI_RELREPOTYPE"
     - echo "RELEASE $DISTELLI_RELEASE"
+    - echo "MANIFEST $DISTELLI_MANIFEST"
+    - echo "BUILDNUM $DISTELLI_BUILDNUM"
+    - echo "BUILD $BUILD_VAR1"
     - DATE=$(date +"%Y%m%d%H%M%S%N")
     - touch exec.$DATE
     - ./application.sh
