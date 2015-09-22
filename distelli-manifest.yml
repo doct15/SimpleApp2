@@ -1,4 +1,4 @@
-bmcgehee2/SimpleApp2:
+bmcgehee/SimpleApp2:
 
   Env:
     - EXAMPLE: '"not overridden!!!"'
