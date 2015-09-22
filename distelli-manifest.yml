@@ -17,6 +17,44 @@ bmcgehee2/SimpleApp2:
     - RepoType: Git
     - RepoPath: .
 
+  PreBuild:
+    - echo "PreBuild"
+    - echo "ENV $EXAMPLE"
+    - echo "ENV2 $EXAMPLE2"
+    - echo "APPNAME $DISTELLI_APPNAME"
+    - echo "APPHOME $DISTELLI_APPHOME"
+    - echo "INSTALLHOME $DISTELLI_INSTALLHOME"
+    - echo "RELVERSION $DISTELLI_RELVERSION"
+    - echo "RELREVISION $DISTELLI_RELREVISION"
+    - echo "RELBRANCH $DISTELLI_RELBRANCH"
+    - echo "RELREPOTYPE $DISTELLI_RELREPOTYPE"
+    - echo "RELEASE $DISTELLI_RELEASE"
+    - echo "MANIFEST $DISTELLI_MANIFEST"
+    - echo "BUILDNUM $DISTELLI_BUILDNUM"
+    - echo "BUILD $BUILD_VAR1"
+    - echo "ENV $DISTELLI_ENV"
+    - DATE=$(date +"%Y%m%d%H%M%S%N")
+    - touch prebuild.$DATE
+
+  Build:
+    - echo "Build"
+    - echo "ENV $EXAMPLE"
+    - echo "ENV2 $EXAMPLE2"
+    - echo "APPNAME $DISTELLI_APPNAME"
+    - echo "APPHOME $DISTELLI_APPHOME"
+    - echo "INSTALLHOME $DISTELLI_INSTALLHOME"
+    - echo "RELVERSION $DISTELLI_RELVERSION"
+    - echo "RELREVISION $DISTELLI_RELREVISION"
+    - echo "RELBRANCH $DISTELLI_RELBRANCH"
+    - echo "RELREPOTYPE $DISTELLI_RELREPOTYPE"
+    - echo "RELEASE $DISTELLI_RELEASE"
+    - echo "MANIFEST $DISTELLI_MANIFEST"
+    - echo "BUILDNUM $DISTELLI_BUILDNUM"
+    - echo "BUILD $BUILD_VAR1"
+    - echo "ENV $DISTELLI_ENV"
+    - DATE=$(date +"%Y%m%d%H%M%S%N")
+    - touch build.$DATE
+
   PreRelease:
     - echo "PreRelease"
     - touch release_timestamp.file
@@ -39,8 +77,46 @@ bmcgehee2/SimpleApp2:
     - DATE=$(date +"%Y%m%d%H%M%Si%N")
     - touch prerelease.$DATE
 
+  AfterBuildSuccess
+    - echo "AfterBuildSuccess"
+    - echo "ENV $EXAMPLE"
+    - echo "ENV2 $EXAMPLE2"
+    - echo "APPNAME $DISTELLI_APPNAME"
+    - echo "APPHOME $DISTELLI_APPHOME"
+    - echo "INSTALLHOME $DISTELLI_INSTALLHOME"
+    - echo "RELVERSION $DISTELLI_RELVERSION"
+    - echo "RELREVISION $DISTELLI_RELREVISION"
+    - echo "RELBRANCH $DISTELLI_RELBRANCH"
+    - echo "RELREPOTYPE $DISTELLI_RELREPOTYPE"
+    - echo "RELEASE $DISTELLI_RELEASE"
+    - echo "MANIFEST $DISTELLI_MANIFEST"
+    - echo "BUILDNUM $DISTELLI_BUILDNUM"
+    - echo "BUILD $BUILD_VAR1"
+    - echo "ENV $DISTELLI_ENV"
+    - DATE=$(date +"%Y%m%d%H%M%S%N")
+    - touch afterbuildsuccess.$DATE
+
+  AfterBuildFailure
+    - echo "AfterBuildFailure"
+    - echo "ENV $EXAMPLE"
+    - echo "ENV2 $EXAMPLE2"
+    - echo "APPNAME $DISTELLI_APPNAME"
+    - echo "APPHOME $DISTELLI_APPHOME"
+    - echo "INSTALLHOME $DISTELLI_INSTALLHOME"
+    - echo "RELVERSION $DISTELLI_RELVERSION"
+    - echo "RELREVISION $DISTELLI_RELREVISION"
+    - echo "RELBRANCH $DISTELLI_RELBRANCH"
+    - echo "RELREPOTYPE $DISTELLI_RELREPOTYPE"
+    - echo "RELEASE $DISTELLI_RELEASE"
+    - echo "MANIFEST $DISTELLI_MANIFEST"
+    - echo "BUILDNUM $DISTELLI_BUILDNUM"
+    - echo "BUILD $BUILD_VAR1"
+    - echo "ENV $DISTELLI_ENV"
+    - DATE=$(date +"%Y%m%d%H%M%S%N")
+    - touch afterbuildfailure.$DATE
+
   ReleaseNotesCmd:
-    - echo "Exec"
+    - echo "ReleaseNotesCmd"
     - echo "ENV $EXAMPLE"
     - echo "ENV2 $EXAMPLE2"
     - echo "APPNAME $DISTELLI_APPNAME"
@@ -117,6 +193,7 @@ bmcgehee2/SimpleApp2:
     - echo "ENV $DISTELLI_ENV"
     - DATE=$(date +"%Y%m%d%H%M%Si%N")
     - touch prerestart.$DATE
+    
   PostRestart:
     - echo "PostRestart"
     - echo "ENV $EXAMPLE"
@@ -135,6 +212,7 @@ bmcgehee2/SimpleApp2:
     - echo "ENV $DISTELLI_ENV"
     - DATE=$(date +"%Y%m%d%H%M%S%N")
     - touch postrestart.$DATE
+    
   PreStart:
     - echo "PreStart"
     - echo "ENV $EXAMPLE"
@@ -153,6 +231,7 @@ bmcgehee2/SimpleApp2:
     - echo "ENV $DISTELLI_ENV"
     - DATE=$(date +"%Y%m%d%H%M%S%N")
     - touch prestart.$DATE
+    
   #Start:
   #  - echo "Start"
   #  - echo "ENV $EXAMPLE"
@@ -172,6 +251,7 @@ bmcgehee2/SimpleApp2:
   #  - DATE=$(date +"%Y%m%d%H%M%S%N")
   #  - touch start.$DATE
   #  - /home/bmcgehee/application.sh
+  
   PostStart:
     - echo "PostStart"
     - echo "ENV $EXAMPLE"
@@ -191,7 +271,9 @@ bmcgehee2/SimpleApp2:
     - DATE=$(date +"%Y%m%d%H%M%S%N")
     - touch poststart.$DATE
   #  - /home/bmcgehee/application.sh
+  
   PreTerminate:
+    - echo "PreTerminate"
     - echo "ENV $EXAMPLE"
     - echo "ENV2 $EXAMPLE2"
     - echo "PreTerminate"
@@ -208,7 +290,8 @@ bmcgehee2/SimpleApp2:
     - echo "BUILD $BUILD_VAR1"
     - echo "ENV $DISTELLI_ENV"
     - DATE=$(date +"%Y%m%d%H%M%S%N")
-    - touch prestart.$DATE
+    - touch preterminate.$DATE
+    
   Terminate:
     - echo "Terminate"
     - echo "ENV $EXAMPLE"
@@ -227,6 +310,7 @@ bmcgehee2/SimpleApp2:
     - echo "ENV $DISTELLI_ENV"
     - DATE=$(date +"%Y%m%d%H%M%S%N")
     - touch terminate.$DATE
+    
   PostTerminate:
     - echo "PostTerminate"
     - echo "ENV $EXAMPLE"
@@ -245,6 +329,7 @@ bmcgehee2/SimpleApp2:
     - echo "ENV $DISTELLI_ENV"
     - DATE=$(date +"%Y%m%d%H%M%S%N")
     - touch postterminate.$DATE
+    
   Exec:
     - echo "Exec"
     - echo "ENV $EXAMPLE"
