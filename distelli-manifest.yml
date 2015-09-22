@@ -77,7 +77,7 @@ bmcgehee2/SimpleApp2:
     - DATE=$(date +"%Y%m%d%H%M%Si%N")
     - touch prerelease.$DATE
 
-  AfterBuildSuccess
+  AfterBuildSuccess:
     - echo "AfterBuildSuccess"
     - echo "ENV $EXAMPLE"
     - echo "ENV2 $EXAMPLE2"
@@ -96,7 +96,7 @@ bmcgehee2/SimpleApp2:
     - DATE=$(date +"%Y%m%d%H%M%S%N")
     - touch afterbuildsuccess.$DATE
 
-  AfterBuildFailure
+  AfterBuildFailure:
     - echo "AfterBuildFailure"
     - echo "ENV $EXAMPLE"
     - echo "ENV2 $EXAMPLE2"
