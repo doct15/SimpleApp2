@@ -350,5 +350,37 @@ bmcgehee/SimpleApp2:
     - touch exec.$DATE
     - ./application.sh
      
-     
+  PreBuildTimeout: 900
+  
+  BuildTimeout: 900
+  
+  AfterBuildSuccessTimeout: 900
+  
+  AfterBuildFailureTimeout: 900
+  
+  PreInstallTimeout: 900
+  
+  InstallTimeout: 900
+  
+  PostInstallTimeout: 900
+  
+  PreRestartTimeout: 900
+  
+  Blah: "Test"
+  
+  PostRestartTimeout: 900
+  
+  PreStartTimeout: 900
+  
+  StartTimeout: 900
+  
+  PostStartTimeout: 900
+  
+  PreTerminateTimeout: 900
+  
+  TerminateTimeout: 900
+  
+  PostTerminateTimeout: 900
+  
+  
 
