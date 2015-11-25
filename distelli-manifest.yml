@@ -176,6 +176,9 @@ bmcgehee/SimpleApp2:
     - echo "BUILDNUM $DISTELLI_BUILDNUM"
     - echo "BUILD $BUILD_VAR1"
     - echo "ENV $DISTELLI_ENV"
+    - echo "====================="
+    - cat config.js
+    - echo "====================="
     - DATE=$(date +"%Y%m%d%H%M%S%N")
     - touch postinstall.$DATE
     
