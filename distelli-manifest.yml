@@ -4,6 +4,9 @@ bmcgehee/SimpleApp2:
     - EXAMPLE: '"not overridden!!!"'
     - EXAMPLE2: '"not overridden!!!"'
     
+  InstallTemplates:
+    - config.js  
+    
   PkgInclude:
     - application.sh
     - app.tgz
