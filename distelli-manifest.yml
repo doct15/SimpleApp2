@@ -10,6 +10,7 @@ bmcgehee/SimpleApp2:
   PkgInclude:
     - application.sh
     - app.tgz
+    - config.js
     - 'sr/'
       
   PkgExclude:
