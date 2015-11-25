@@ -1,0 +1,6 @@
+app.tgz
+prebuild.*
+build.*
+afterbuildsuccess.*
+afterbuildfailure.*
+
