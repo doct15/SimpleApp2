@@ -39,6 +39,39 @@ bmcgehee/SimpleApp2:
     - echo "ENV $DISTELLI_ENV"
     - DATE=$(date +"%Y%m%d%H%M%S%N")
     - touch prebuild.$DATE
+    
+    - echo "--npm nvm--"
+    - which nvm || true
+    - nvm --version || true
+    - which npm || true
+    - npm --version || true
+    
+    - echo "--mvn gradle mvnvm--"
+    - which mvnvm || true
+    - mvnvm --version || true
+    - which mvn || true
+    - mvn --version || true
+    - which gradle || true
+    - gradle --version || true
+    
+    - echo "--rvm rbenv--"
+    - which rvm || true
+    - rvm --version || true
+    - which rbenv || true
+    - rbenv --version || true
+    
+    - echo "--phpenv php-build--"
+    - which phpenv || true
+    - phpenv --version || true
+    - which php-build || true
+    - php-build --version || true
+    
+    - echo "--ant gradle--"
+    - which ant || true
+    - ant --version || true
+    - which gradle || true
+    - gradle --version || true
+    
 
   Build:
     - echo "Build"
