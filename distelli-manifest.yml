@@ -60,12 +60,6 @@ bmcgehee/SimpleApp2:
     - which rbenv || true
     - rbenv --version || true
     
-    - echo "--phpenv php-build--"
-    - which phpenv || true
-    - phpenv --version || true
-    - which php-build || true
-    - php-build --version || true
-    
     - echo "--ant gradle--"
     - which ant || true
     - ant -version || true
@@ -80,6 +74,7 @@ bmcgehee/SimpleApp2:
     - which php-build || true
     - php-build || true
     
+
 
   Build:
     - echo "Build"
