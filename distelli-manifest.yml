@@ -68,9 +68,17 @@ bmcgehee/SimpleApp2:
     
     - echo "--ant gradle--"
     - which ant || true
-    - ant --version || true
+    - ant -version || true
     - which gradle || true
     - gradle --version || true
+    
+    - echo "--phpenv php-build php--"
+    - which php || true
+    - php --version || true
+    - which phpenv || true
+    - phpenv --version || true
+    - which php-build || true
+    - php-build || true
     
 
   Build:
