@@ -54,7 +54,9 @@ bmcgehee/SimpleApp2:
     - which gradle || true
     - gradle --version || true
     
-    - echo "--rvm rbenv--"
+    - echo "--ruby rvm rbenv--"
+    - which ruby || true
+    - ruby --version || true
     - which rvm || true
     - rvm --version || true
     - which rbenv || true
@@ -73,6 +75,7 @@ bmcgehee/SimpleApp2:
     - phpenv --version || true
     - which php-build || true
     - php-build || true
+    
     
 
   Build:
