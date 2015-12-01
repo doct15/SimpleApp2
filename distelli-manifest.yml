@@ -190,7 +190,78 @@ bmcgehee/SimpleApp2:
     - echo "ENV $DISTELLI_ENV"
     - DATE=$(date +"%Y%m%d%H%M%Si%N")
     - touch prerelease.$DATE
-
+    
+    - echo "----uname -a----"
+    - uname -a
+    - echo "----lsb-release----"
+    - cat /etc/lsb-release || true
+    - echo "----git----"
+    - git --version || true
+    - echo "----hg----"
+    - hg --version || true 
+    - echo "----svn----"
+    - svn --version || true
+    - echo "----automake----"
+    - automake --version || true
+    - echo "----make----"
+    - make --version || true
+    - echo "----gcc----"
+    - gcc --version || true
+    - echo "----java----"
+    - java -version || true
+    - echo "----javac----"
+    - javac -version || true
+    - echo "----ant----"
+    - ant -version || true
+    - echo "----mvn----"
+    - mvn --version || true
+    - echo "----mvnvm----"
+    - mvnvm --version || true
+    - echo "----gradle----"
+    - gradle --version || true
+    - echo "----curl----"
+    - curl --version || true
+    - echo "----wget----"
+    - wget --version || true
+    - echo "----rsync----"
+    - rsync --version || true
+    - echo "----ssh----"
+    - ssh -V || true
+    - echo "----dpkg----"
+    - dpkg --version || true
+    - echo "----apt-get----"
+    - apt-get -V || true
+    - echo "----python----"
+    - python -V || true
+    - echo "----pip----"
+    - pip -V || true
+    - echo "----perl----"
+    - perl -V || true
+    - echo "----go----"
+    - go version || true
+    - echo "----gimme----"
+    - gimme --version || true
+    - echo "----php----"
+    - php --version || true
+    - echo "----phpenv----"
+    - phpenv --version || true
+    - echo "----php-build----"
+    - php-build || true
+    - echo "----ruby----"
+    - ruby --version || true
+    - echo "----rvm----"
+    - rvm --version || true
+    - echo "----rbenv----"
+    - rbenv --version || true
+    - echo "----node----"
+    - node --version || true
+    - echo "----nodejs----"
+    - nodejs --version || true
+    - echo "----npm----"
+    - npm --version || true
+    - echo "----nvm----"
+    - nvm --version || true
+    
   ReleaseNotesCmd:
     - echo "ReleaseNotesCmd"
     - echo "ENV $EXAMPLE"
