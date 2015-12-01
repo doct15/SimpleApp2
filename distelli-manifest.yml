@@ -87,7 +87,7 @@ bmcgehee/SimpleApp2:
     - echo "----perl----"
     - perl -V || true
     - echo "----go----"
-    - go --version || true
+    - go version || true
     - echo "----gimme----"
     - gimme --version || true
     - echo "----php----"
