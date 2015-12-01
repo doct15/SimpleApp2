@@ -111,7 +111,6 @@ bmcgehee/SimpleApp2:
     - echo "----nvm----"
     - nvm --version || true
 
-
   Build:
     - echo "Build"
     - echo "ENV $EXAMPLE"
