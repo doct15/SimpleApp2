@@ -110,6 +110,7 @@ bmcgehee/SimpleApp2:
     - npm --version || true
     - echo "----nvm----"
     - nvm --version || true
+ 
     
     
   Build:
