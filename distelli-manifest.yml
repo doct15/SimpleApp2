@@ -4,6 +4,7 @@ bmcgehee/SimpleApp2:
     - EXAMPLE: '"not overridden!!!"'
     - EXAMPLE2: '"not overridden!!!"'
     - USER: 'girly'
+    - DIR: '/tmp/foo/bar'
     
   InstallTemplates:
     - config.js  
