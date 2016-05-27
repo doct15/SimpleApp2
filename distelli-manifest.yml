@@ -235,29 +235,29 @@ bmcgehee/SimpleApp2:
     - echo "ENV $DISTELLI_ENV"
     - DATE=$(date +"%Y%m%d%H%M%Si%N")
     - touch preinstall.$DATE
-    - if [ -z "$USER" ]; then
-    -   echo "You must set env var USER"
-    -   exit 1
-    - fi
-    - doesexist="$(id $USER || true)"
-    - if [[ ${doesexist:0:3} == "uid" ]]; then
-    -   echo "User $USER exists"
-    - else
-    -   echo "User $USER doesn't exist. Creating..."
-    -   sudo useradd $USER
-    - fi
-    - if [ -z "$DIR" ]; then
-    -   echo "You must set env var DIR"
-    -   exit 1
-    - fi
-    - if [ -d "$DIR" ]; then
-    -   echo "Directory $DIR exists."
-    - else
-    -   echo "Directory $DIR does not exist. Creating..."
-    -   mkdir -p $DIR
-    -   #sudo chmod -R 666 $DIR
-    -   #sudo chown bmcgehee:bmcgehee $DIR
-    - fi
+    #- if [ -z "$USER" ]; then
+    #-   echo "You must set env var USER"
+    #-   exit 1
+    #- fi
+    #- doesexist="$(id $USER || true)"
+    #- if [[ ${doesexist:0:3} == "uid" ]]; then
+    #-   echo "User $USER exists"
+    #- else
+    #-   echo "User $USER doesn't exist. Creating..."
+    #-   sudo useradd $USER
+    #- fi
+    #- if [ -z "$DIR" ]; then
+    #-   echo "You must set env var DIR"
+    #-   exit 1
+    #- fi
+    #- if [ -d "$DIR" ]; then
+    #-   echo "Directory $DIR exists."
+    #- else
+    #-   echo "Directory $DIR does not exist. Creating..."
+    #-   mkdir -p $DIR
+    #-   #sudo chmod -R 666 $DIR
+    #-   #sudo chown bmcgehee:bmcgehee $DIR
+    #- fi
     
   #Install:
   #  - echo "Install"
@@ -279,9 +279,9 @@ bmcgehee/SimpleApp2:
     - echo "BUILDNUM $DISTELLI_BUILDNUM"
     - echo "BUILD $BUILD_VAR1"
     - echo "ENV $DISTELLI_ENV"
-    - echo "====================="
-    - cat config.js
-    - echo "====================="
+    #- echo "====================="
+    #- cat config.js
+    #- echo "====================="
     - DATE=$(date +"%Y%m%d%H%M%S%N")
     - touch postinstall.$DATE
     

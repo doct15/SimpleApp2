@@ -5,15 +5,16 @@
 # * Linux Host
 # * MAC OS X Host
 #
-nodename=`uname -n`
-arch=`uname -m`
-datetime=`date +"%u %m/%d/%Y %H:%M:%S.%N"`
-echo "Hello World from Distelli."
-echo "You have successfully deployed a simple application script."
-echo "Server: $nodename"
-echo "Server Architecture: $arch"
-echo "Server Time: $datetime"
-echo "Manifest Environment Variable: $EXAMPLE"
-echo ""
-sleep 10
-
+while true; do
+  nodename=`uname -n`
+  arch=`uname -m`
+  datetime=`date +"%u %m/%d/%Y %H:%M:%S.%N"`
+  echo "Hello World from Distelli."
+  echo "You have successfully deployed a simple application script."
+  echo "Server: $nodename"
+  echo "Server Architecture: $arch"
+  echo "Server Time: $datetime"
+  echo "Manifest Environment Variable: $EXAMPLE"
+  echo ""
+  sleep 3
+done
