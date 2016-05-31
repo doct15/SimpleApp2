@@ -16,5 +16,5 @@ while true; do
   echo "Server Time: $datetime"
   echo "Manifest Environment Variable: $EXAMPLE"
   echo ""
-  sleep 3
+  sleep 10
 done
