@@ -458,6 +458,7 @@ bmcgehee/SimpleApp2:
     - echo "ENV $DISTELLI_ENV"
     - DATE=$(date +"%Y%m%d%H%M%S%N")
     - touch exec.$DATE
+    - true > distelli-stdout.log
     - ./application.sh
      
   PreInstallTimeout: 900
